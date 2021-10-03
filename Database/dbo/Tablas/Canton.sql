@@ -9,11 +9,4 @@
 )WITH (DATA_COMPRESSION = PAGE)
 GO 
 	
-	
-	
-	
-	
-	
-	
-	[Id] INT NOT NULL PRIMARY KEY
-)
+		
