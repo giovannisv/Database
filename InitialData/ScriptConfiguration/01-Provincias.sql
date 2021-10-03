@@ -16,13 +16,13 @@ VALUES
 
 UPDATE P SET
 P.NombreProvincia = TM.NombreProvincia
-FROM dbo.Provincia P
+FROM dbo.Provincias P
 INNER JOIN #ProvinciaTemp TM
 ON P.IdProvincia=MT.IdProvincia
 
 ----Insert Datos----
-SET IDENTITY_INSERT dbo.Provincia ON
-INSERT INTO dbo.Provincia(
+SET IDENTITY_INSERT dbo.Provincias ON
+INSERT INTO dbo.Provincias(
 IdProvincia, NombreProvincia)
 SELECT 
 IdProvincia, NombreProvincia
@@ -30,8 +30,7 @@ FROM #ProvinciaTemp
 EXCEPT 
 SELECT 
 IdProvincia, NombreProvincia
-FROM dbo.Provincia
-SET IDENTITY_INSERT dbo.Provincia OFF
+FROM dbo.Provincias
+SET IDENTITY_INSERT dbo.Provincias OFF
 GO
-
 
