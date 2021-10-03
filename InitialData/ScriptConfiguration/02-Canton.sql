@@ -10,15 +10,15 @@ VALUES
 
 ---ACTUALIZAR DATOS----
 UPDATE P SET
- P.IdProvincia= TM.IdProvincia,
- P.NombreCanton= TM.NombreCanton
+ P. IdProvincia= TM.  IdProvincia,
+ P. NombreCanton= TM.NombreCanton
 FROM dbo.Canton P
 INNER JOIN #CantonTemp TM
- ON P.IdCanton= TM.IdCanton
+ ON P. IdCanton= TM. IdCanton
 
- ----INSERTAR DATOS---
+  ----INSERTAR DATOS---
 
- SET IDENTITY_INSERT dbo.Canton ON
+ SET IDENTITY_INSERT dbo. Canton ON
 
 INSERT INTO dbo.Canton(
 IdCanton, IdProvincia,NombreCanton )
@@ -33,8 +33,7 @@ FROM dbo.Canton
 SET IDENTITY_INSERT dbo.Canton OFF
 GO
 
-
----  DECLARE @VARTEXT VARCHAR(MAX)=NULL
+DECLARE @VARTEXT VARCHAR(MAX)=NULL
 
 SELECT
 @VARTEXT=CONCAT(@VARTEXT,'(',
@@ -43,4 +42,5 @@ ISNULL(CAST([COD_PROVINCIA] AS VARCHAR),'NULL'),',',
 '''',[DES_CANTON],'''',',')
 FROM [dbo]. [Canton]
 
-SELECT@VARTEXT
+SELECT @VARTEXT
+

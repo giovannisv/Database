@@ -10,14 +10,14 @@ VALUES
 
 ----ACTUALIZAR DATOS---
 UPDATE P SET
- P. IdCanton=TM. IdCanton,
- P. NombreDistrito= TM. NombreDistrito
-FROM dbo. Distrito P
+ P.IdCanton= TM.IdCanton,
+ P.NombreDistrito= TM.NombreDistrito
+FROM dbo.Distrito P
 INNER JOIN #DistritoTemp TM
- ON P.Iddistrito= TM. Iddistrito
+ ON P.IdDistrito= TM.IdDistrito
 
 
-----INSERTAR DATOS---
+ ----INSERTAR DATOS---
 
  SET  IDENTITY_INSERT dbo.Distrito ON
 
