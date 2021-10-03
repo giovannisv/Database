@@ -67,5 +67,7 @@
     <Build Include="Schema\exp.sql" />
     <Build Include="dbo\Tablas\Provincia.sql" />
     <Build Include="exp\Tablas\Empleado.sql" />
+    <Build Include="dbo\Tablas\Canton.sql" />
+    <Build Include="dbo\Tablas\Distrito.sql" />
   </ItemGroup>
 </Project>
